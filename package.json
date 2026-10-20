@@ -1,0 +1,69 @@
+{
+  "name": "@tray-tecnologia/tray-api-plugin",
+  "version": "2.1.0",
+  "description": "Plugin de documentação da API Tray para agentes de IA.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://developers.tray.com.br",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tray-tecnologia/tray-api-ai-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tray-tecnologia/tray-api-ai-plugin/issues"
+  },
+  "keywords": [
+    "tray",
+    "tray-api",
+    "e-commerce",
+    "api",
+    "plugin",
+    "skills",
+    "agents",
+    "oauth",
+    "webhooks"
+  ],
+  "files": [
+    "AGENTS.md",
+    "GEMINI.md",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "skills/**",
+    "agents/**",
+    "commands/**",
+    "hooks/**",
+    "scripts/**",
+    ".claude-plugin/**",
+    ".cursor-plugin/**",
+    ".codex-plugin/**",
+    ".cursor/rules/**",
+    ".github/copilot-instructions.md",
+    ".aiassistant/rules/**",
+    "gemini-extension.json",
+    "mcp/**",
+    ".mcp.json"
+  ],
+  "bin": {
+    "tray-mcp": "./mcp/server.mjs"
+  },
+  "scripts": {
+    "lint:skills": "node scripts/lint-skills.mjs",
+    "mcp": "node mcp/server.mjs",
+    "smoke": "node scripts/smoke-test.js",
+    "test": "node --test $(find tests -name '*.test.mjs' | sort)",
+    "version:check": "node scripts/sync-version.js --check",
+    "version:set": "node scripts/sync-version.js --set"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

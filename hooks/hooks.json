@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Você é um auditor de código de integrações com a API Tray. Avalie $ARGUMENTS e responda OBRIGATORIAMENTE em JSON puro (sem markdown, sem prosa) seguindo o schema oficial: {\"ok\": true} quando nada precisa de atenção, ou {\"ok\": false, \"reason\": \"<descrição curta do problema>\"} quando houver algo a alertar.\n\nResponda {\"ok\": true} (silencioso) nos casos: arquivo de template/documentação (.env.example, .env.template, .env.sample, *.example, *.template, *.sample, *.dist, *.md, *.mdc, *.txt, *.rst, *.json, *.yml, *.yaml, *.toml, LICENSE, .gitignore); placeholders óbvios em qualquer arquivo (sua_*_aqui, seu_*_aqui, your_*_here, <...>, {{...}}, xxx, TODO, CHANGE_ME, ***, strings vazias); valores de exemplo dentro de docstrings/comentários.\n\nResponda {\"ok\": false, \"reason\": ...} apenas se, em arquivo de código de produção, ocorrer um destes casos: (1) credencial REAL hardcoded — string atribuída a access_token, consumer_key, consumer_secret ou refresh_token com ≥20 caracteres alfanuméricos/hex/base64 sem espaços, fora dos placeholders acima — o gatilho é o VALOR, nunca o NOME da variável; (2) URL Tray fora do padrão https://{api_address}/<recurso>?access_token={token}; (3) chamada POST/PUT para /products, /orders, /customers, /variants e demais recursos Tray com body JSON sem envolver na chave do recurso (ex.: deve ser {\"Product\": {...}}, {\"Order\": {...}}, {\"Customer\": {...}}); (4) código que monta payload para um recurso com skills/<recurso>/scripts/validate.mjs disponível, sem rodar o validador — sugira a execução. O reason deve ter no máximo 2 linhas, focado no problema concreto encontrado."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "tray-api",
+  "version": "2.1.0",
+  "description": "Plugin completo para integração com as APIs da Tray. Acelera o desenvolvimento de aplicativos e-commerce por parceiros e comunidade na plataforma Tray, fornecendo documentação detalhada de todos os endpoints, fluxos de autenticação OAuth, webhooks e boas práticas de integração.",
+  "author": {
+    "name": "Rodolfo Moraes",
+    "email": "rmoraes@tray.net.br",
+    "url": "https://github.com/adhenawer"
+  },
+  "organization": {
+    "name": "Tray Tecnologia",
+    "url": "https://github.com/tray-tecnologia"
+  },
+  "homepage": "https://developers.tray.com.br",
+  "repository": "https://github.com/tray-tecnologia/tray-api-ai-plugin",
+  "license": "MIT",
+  "categories": [
+    "e-commerce",
+    "api-integration",
+    "developer-tools"
+  ],
+  "languages": [
+    "pt-BR"
+  ],
+  "keywords": [
+    "tray",
+    "tray-api",
+    "e-commerce",
+    "loja-virtual",
+    "plataforma-ecommerce",
+    "api-tray",
+    "integracao",
+    "marketplace",
+    "oauth",
+    "webhook",
+    "produtos",
+    "pedidos",
+    "carrinho-compras",
+    "frete",
+    "pagamentos",
+    "nota-fiscal",
+    "cupom",
+    "b2b",
+    "multicd",
+    "dropshipping",
+    "omnichannel",
+    "parceiros-tray",
+    "aplicativo-tray",
+    "homologacao",
+    "vitrine",
+    "catalogo",
+    "estoque",
+    "envio",
+    "etiqueta",
+    "brasil"
+  ]
+}
